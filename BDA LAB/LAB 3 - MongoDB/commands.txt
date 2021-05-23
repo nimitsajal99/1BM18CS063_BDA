@@ -1,0 +1,51 @@
+use Student
+
+db.Student.insert(
+    {
+        "RollNo" : 10,
+        "Age" : 21,
+        "ContactNo" : 7878956421,
+        "EmailId" : "nimit.cs18@bmsce.ac.in"
+    }
+);
+    
+db.Student.insert(
+    {
+        "RollNo" : 20,
+        "Age" : 31,
+        "ContactNo" : 7823232421,
+        "EmailId" : "sajal.cs18@bmsce.ac.in"
+    }
+);
+    
+db.Student.insert(
+    {
+        "RollNo" : 20,
+        "Age" : 25,
+        "ContactNo" : 5872226421,
+        "EmailId" : "nimit.cs18@bmsce.ac.in"
+    }
+);
+    
+db.Student.insert(
+    { 
+        "RollNo" : 40,
+        "Age" : 35,
+        "ContactNo" : 2823132121,
+        "EmailId" : "sajal.cs18@bmsce.ac.in"
+    }
+);
+    
+db.Student.find()
+    
+db.Student.updateOne(
+    { "RollNo" : 10},
+    {
+        $set : { "EmailId" : "parag.cs18@bmsce.ac.in"}
+    }
+);
+    
+db.Student.replaceOne(
+   { "Age": 35 },
+   { "RollNo" : 40, "Age" : 50, "ContactNo" : 2823132121, "EmailId" : "gattani.cs18@bmsce.ac.in"}
+);
